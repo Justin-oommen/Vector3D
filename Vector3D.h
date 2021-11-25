@@ -1,7 +1,7 @@
 //Vector3D.h  
 #ifndef Vector3D_h
 #define Vector3D_h
-
+#include<cmath>
 #include<iostream>
 using std::cout;
 using std::cin;
@@ -12,8 +12,14 @@ class Vector3D{
  public:
   //default constructor
   Vector3D();
-  //Regular Constructor:
-  Vector3D(double coordinate1, double coordinate2, double coordinate3);
+  //spherical-polar coordinate(r,theta,phi)
+  static Vector3D Polar(double r, double theta, double phi){
+    return Vector3D(r*sin(theta)*cos(phi), r*sin(theta)*sin(phi), r*cos(theta));
+  }
+  //cartesian coordinate(x,y,z)
+  static Vector3D Cartesian(double x, double y, double z){
+    return Vector3D(x,y,z);
+  }
   //Destructor
   ~Vector3D() {};
 
@@ -68,6 +74,15 @@ class Vector3D{
   double coordinate1_;
   double coordinate2_;
   double coordinate3_;
+
+  //Regular Constructor:
+  Vector3D(double coordinate1, double coordinate2, double coordinate3){
+    coordinate1_=coordinate1;
+    coordinate2_=coordinate2;
+    coordinate3_=coordinate3;
+  };
+
+  
 };
 
 #endif
