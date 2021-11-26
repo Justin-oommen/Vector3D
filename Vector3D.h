@@ -34,9 +34,9 @@ class Vector3D{
   //Calculate Phi
   double phi() const;
   //Scalar Product
-  double scalar_product() const;
+  Vector3D scalar_product(const Vector3D& rhs ) const;
   //Vector Product
-  Vector3D vector_product() const;
+  Vector3D vector_product(const Vector3D& rhs) const;
 
   //setter method
   //change the coordinate values
