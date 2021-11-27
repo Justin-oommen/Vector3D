@@ -98,11 +98,11 @@ Vector3D operator/(const float& lhs, const Vector3D& rhs){
 //overloading <<
 std::ostream& operator<<(std::ostream& os, const Vector3D& rhs){
   using namespace std;
-  os << " = " << rhs.coordinate1_<< "i^ "<< rhs.coordinate2_<<"j^ "<<rhs.coordinate3_<<"k^";
+  os << " = " << rhs.coordinate1_<< "i^ + "<< rhs.coordinate2_<<" j^ + "<<rhs.coordinate3_<<" k^";
   return os;
 }
 
 //print
 void Vector3D::print(const std::string& vector) const{
-  cout<< vector << " = " << coordinate1_<< "i^ "<<coordinate2_<<"j^ "<<coordinate3_<<"k^"<<endl;
+  cout<< vector << " = " << coordinate1_<< "i^ + "<<coordinate2_<<" j^ +  "<<coordinate3_<<" k^"<<endl;
 }

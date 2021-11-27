@@ -62,14 +62,14 @@ class Vector3D{
   //using friend method to achieve symmetry of the above operation
   friend Vector3D operator*(const float& lhs, const Vector3D& rhs);
   friend Vector3D operator/(const float& lhs, const Vector3D& rhs);
-
+  
   //overloading <<
   friend std::ostream& operator<<(std::ostream& os, const Vector3D& rhs);
 
   //Utility function
   void print(const std::string& vector) const;
-
-
+  
+  
  private:
   double coordinate1_;
   double coordinate2_;
@@ -81,7 +81,7 @@ class Vector3D{
     coordinate2_=coordinate2;
     coordinate3_=coordinate3;
   };
-
+  
   
 };
 
