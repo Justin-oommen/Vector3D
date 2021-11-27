@@ -46,22 +46,22 @@ class Vector3D{
   //overloading operators +,-,=
   Vector3D operator+(const Vector3D& rhs) const;
   Vector3D operator-(const Vector3D& rhs) const;
-  Vector3D operator=(const Vector3D& rhs) const;
+  const Vector3D&  operator=(const Vector3D& rhs);
 
   //overloading  <,>
-  bool operator<(const Vector3D& rhs) const;
-  bool operator>(const Vector3D& rhs) const;
+  // bool operator<(const Vector3D& rhs) const;
+  //bool operator>(const Vector3D& rhs) const;
 
   //overloading >=,<=
-  const Vector3D& operator>=(const Vector3D& rhs);
-  const Vector3D& operator<=(const Vector3D& rhs);
+  //const Vector3D& operator>=(const Vector3D& rhs);
+  //const Vector3D& operator<=(const Vector3D& rhs);
   
   //overloading * and / to multiply and divide by a float
   Vector3D operator*(const float& rhs) const;
   Vector3D operator/(const float& rhs) const;
   //using friend method to achieve symmetry of the above operation
-  friend Vector3D& operator*(const float& lhs, const Vector3D& rhs);
-  friend Vector3D& operator/(const float& lhs, const Vector3D& rhs);
+  friend Vector3D operator*(const float& lhs, const Vector3D& rhs);
+  friend Vector3D operator/(const float& lhs, const Vector3D& rhs);
 
   //overloading <<
   friend std::ostream& operator<<(std::ostream& os, const Vector3D& rhs);
