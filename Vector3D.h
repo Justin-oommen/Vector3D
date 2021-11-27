@@ -3,6 +3,7 @@
 #define Vector3D_h
 #include<cmath>
 #include<iostream>
+//#include<vector>
 using std::cout;
 using std::cin;
 using std::endl;
@@ -26,7 +27,16 @@ class Vector3D{
   //getter methods
 
   //get the coordinates
-  double coordinates() const {return coordinate1_ ; return coordinate2_; return coordinate3_ ;}
+  double coordinate_x() const {
+    return (coordinate1_);
+  }
+  double coordinate_y() const {
+    return (coordinate2_);
+  }
+  double coordinate_z() const {
+    return (coordinate3_);
+  }
+
   //calculate the magnitude
   double magnitude() const;
   //Calculate theta
